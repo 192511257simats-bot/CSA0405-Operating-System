@@ -1,0 +1,18 @@
+$ ./lockgran
+threads ->                     1           2           4   (bookings per second, millions)
+one global lock             2.72        1.23        1.46
+one lock per train          2.72        2.24        2.37
+one lock per coach          2.70        4.58        4.53
+(a '!' would mean a seat was sold twice; none shown = every seat sold at most once)
+
+$ ./atomic_spin
+method            threads    ns/update   wall (s)     CPU/wall
+pthread mutex           1         23.2      0.093         1.00 
+pthread mutex           4         74.0      0.296         1.85 
+pthread mutex          16         73.5      0.294         1.88 
+spin lock               1          9.6      0.039         1.00 
+spin lock               4         89.7      0.359         1.98 
+spin lock              16        283.6      1.134         1.95 
+atomic_fetch_add        1          8.4      0.033         1.00 
+atomic_fetch_add        4         21.0      0.084         1.91 
+atomic_fetch_add       16         20.1      0.080         1.90 

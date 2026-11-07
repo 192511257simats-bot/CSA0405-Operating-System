@@ -1,0 +1,17 @@
+$ gcc -std=c11 -Wall -Wextra -o banker_complete banker_complete.c && ./banker_complete
+initial state safe: P1 P3 P4 P0 P2
+P1 request: granted, safe sequence P1 P3 P4 P0 P2
+P4 request: must wait (not available)
+P0 request: denied (unsafe)
+
+$ ./detect   (detection-and-recovery alternative)
+deadlock detection result: P0 P1  <- DEADLOCKED, abort one of them (cheapest victim)
+
+$ ./bench_banker
+     n   m     time/check    ops (m*n^2)    ns per op
+    10   3        0.21 us            300         0.71 safe
+   100   3       15.00 us          30000         0.50 safe
+  1000   3     1206.74 us        3000000         0.40 safe
+    10   6        0.35 us            600         0.58 safe
+   100   6       26.30 us          60000         0.44 safe
+  1000   6     2317.74 us        6000000         0.39 safe

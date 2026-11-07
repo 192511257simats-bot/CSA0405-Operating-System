@@ -1,0 +1,17 @@
+$ gcc -std=c11 -Wall -Wextra -o pipe_complete pipe_complete.c && ./pipe_complete
+analyser: 6 readings, average 35.5, max 41
+reader: done
+
+$ gcc -DNO_CLOSE ... && timeout 3 ./pipe_noclose   # close(fd[1]) removed in parent
+exit status: 124  (124 = killed by timeout, child never finished)
+
+$ ./shm_sem
+analyser: 6 readings, average 35.5, max 41
+reader: done
+
+$ ./bench_ipc
+(best of 5 runs)
+    size     pipe (s)    shm+sem (s)  msg queue (s)
+    1 MB       0.0010         0.0008         0.0007
+   10 MB       0.0053         0.0012         0.0047
+  100 MB       0.0555         0.0065         0.0289

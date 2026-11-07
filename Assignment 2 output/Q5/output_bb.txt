@@ -1,0 +1,17 @@
+$ gcc -std=gnu11 -Wall -Wextra -pthread -o bb_complete bb_complete.c && ./bb_complete
+items consumed: 20, sum = 210 (expected 210)
+
+$ for i in $(seq 100); do ./bb_complete; done | sort | uniq -c
+    100 items consumed: 20, sum = 210 (expected 210)
+
+$ ./bb_multi 1 ; ./bb_multi 4   (with mutex)
+1 producer(s), 1 consumer(s): produced 20000 | consumed exactly once 20000 | lost 0 | duplicated 0  -> CORRECT
+4 producer(s), 4 consumer(s): produced 80000 | consumed exactly once 80000 | lost 0 | duplicated 0  -> CORRECT
+
+$ ./bb_nomutex 4   (mutex removed, semaphores only; 3 runs)
+4 producer(s), 4 consumer(s): produced 80000 | consumed exactly once 76349 | lost 1826 | duplicated 1825  -> WRONG
+4 producer(s), 4 consumer(s): produced 80000 | consumed exactly once 76355 | lost 1824 | duplicated 1821  -> WRONG
+4 producer(s), 4 consumer(s): produced 80000 | consumed exactly once 74776 | lost 2615 | duplicated 2609  -> WRONG
+
+$ ./bb_nomutex 1   (1 producer, 1 consumer, no mutex)
+1 producer(s), 1 consumer(s): produced 20000 | consumed exactly once 20000 | lost 0 | duplicated 0  -> CORRECT

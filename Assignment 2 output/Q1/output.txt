@@ -1,0 +1,39 @@
+$ ps -o pid,ppid,stat,wchan:12,rss,cmd --ppid 4316 -p 4316
+  PID  PPID STAT WCHAN          RSS CMD
+ 4316  4305 S    do_wait       1868 ./fork_demo 4 6
+ 4318  4316 S    hrtimer_nano   928 ./fork_demo 4 6
+ 4319  4316 S    hrtimer_nano   928 ./fork_demo 4 6
+ 4320  4316 S    hrtimer_nano   928 ./fork_demo 4 6
+ 4321  4316 S    hrtimer_nano   928 ./fork_demo 4 6
+
+$ grep -E 'Name|State|Pid|PPid|VmSize|VmRSS|voluntary' /proc/4318/status
+Name:	fork_demo
+State:	S (sleeping)
+Pid:	4318
+PPid:	4316
+VmSize:	    2712 kB
+VmRSS:	     928 kB
+voluntary_ctxt_switches:	1
+nonvoluntary_ctxt_switches:	0
+
+$ ls /proc/4318 | head -12
+arch_status attr autogroup auxv cgroup clear_refs cmdline comm coredump_filter cpuset cwd environ 
+
+--- program output ---
+parent (server) pid=4316 creating 4 sessions
+  session 1: pid=4318 ppid=4316
+  session 2: pid=4319 ppid=4316
+  session 4: pid=4321 ppid=4316
+  session 3: pid=4320 ppid=4316
+parent: reaped pid=4318 exit code=0
+parent: reaped pid=4319 exit code=1
+parent: reaped pid=4320 exit code=2
+parent: reaped pid=4321 exit code=3
+
+$ ./bench_q1
+create+exit+wait of one process :    106.6 us (x2000 = 0.213 s)
+create+exit+join of one thread  :     39.9 us (x2000 = 0.080 s)
+process creation is 2.7x slower than thread creation
+resident memory of this tiny process: 2048 kB
+process context switch (incl. pipe syscalls) : 1.92 us
+thread  context switch (incl. pipe syscalls) : 1.74 us

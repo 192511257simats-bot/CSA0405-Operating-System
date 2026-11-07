@@ -1,0 +1,16 @@
+$ gcc -O1 -Wall -pthread plates.c -o plates && ./plates
+CPU cores available: 2
+sequential (1 thread)        1.133 s   speed-up 1.00  checksum e25ad33eba440200
+64 threads (1 per camera)    0.566 s   speed-up 2.00  checksum OK
+pool of 4 threads            0.568 s   speed-up 2.00  checksum OK
+pool of 8 threads            0.560 s   speed-up 2.02  checksum OK
+pool of 16 threads           0.567 s   speed-up 2.00  checksum OK
+
+Shared counter, 2 threads x 2000000 increments (expected 4000000):
+  no protection : 2034844
+  with mutex    : 4000000
+
+$ ./procs   (alternative: processes + pipe)
+ 4 processes:  0.555 s  results received through pipe: 64  checksum e25ad33eba440200
+ 8 processes:  0.557 s  results received through pipe: 64  checksum e25ad33eba440200
+16 processes:  0.556 s  results received through pipe: 64  checksum e25ad33eba440200

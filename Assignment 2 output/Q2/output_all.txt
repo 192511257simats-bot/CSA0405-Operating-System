@@ -1,0 +1,47 @@
+Jobs: P1(at0,bt8,pr3) P2(at1,bt4,pr1) P3(at2,bt9,pr4) P4(at3,bt5,pr2)
+
+== FCFS ==
+Gantt: P1(0-8) P2(8-12) P3(12-21) P4(21-26)
+Process  TAT  WT  RT
+P1         8   0   0
+P2        11   7   7
+P3        19  10  10
+P4        23  18  18
+Average TAT = 15.25, WT = 8.75, RT = 8.75   (dispatches 4)
+
+== SJF (non-preemptive) ==
+Gantt: P1(0-8) P2(8-12) P4(12-17) P3(17-26)
+Process  TAT  WT  RT
+P1         8   0   0
+P2        11   7   7
+P3        24  15  15
+P4        14   9   9
+Average TAT = 14.25, WT = 7.75, RT = 7.75   (dispatches 4)
+
+== SRTF (preemptive SJF) ==
+Gantt: P1(0-1) P2(1-5) P4(5-10) P1(10-17) P3(17-26)
+Process  TAT  WT  RT
+P1        17   9   0
+P2         4   0   0
+P3        24  15  15
+P4         7   2   2
+Average TAT = 13.00, WT = 6.50, RT = 4.25   (dispatches 5)
+
+== Priority (non-preemptive, 1 = highest) ==
+Gantt: P1(0-8) P2(8-12) P4(12-17) P3(17-26)
+Process  TAT  WT  RT
+P1         8   0   0
+P2        11   7   7
+P3        24  15  15
+P4        14   9   9
+Average TAT = 14.25, WT = 7.75, RT = 7.75   (dispatches 4)
+
+== Round Robin, q = 3 ==
+Gantt: P1(0-3) P2(3-6) P3(6-9) P4(9-12) P1(12-15) P2(15-16) P3(16-19) P4(19-21) P1(21-23) P3(23-26)
+Process  TAT  WT  RT
+P1        23  15   0
+P2        15  11   2
+P3        24  15   4
+P4        18  13   6
+Average TAT = 20.00, WT = 13.50, RT = 3.00   (dispatches 10)
+

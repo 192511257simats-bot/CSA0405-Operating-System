@@ -1,0 +1,7 @@
+$ ./peterson
+Peterson, plain variables   : counter = 1999964 (expected 2000000)
+Peterson, atomic seq_cst    : counter = 2000000 (expected 2000000)
+
+$ ./classic
+Dining philosophers: meals = 20000 20000 20000 20000 20000  neighbour-conflicts = 0  (no deadlock, finished)
+Readers-writers: writes done = 10000 (expected 10000), reads overlapping a writer = 0

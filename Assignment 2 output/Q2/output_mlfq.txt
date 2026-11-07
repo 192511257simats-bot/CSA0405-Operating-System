@@ -1,0 +1,6 @@
+Workload: films 1200 s @0, 900 s @5; eight 2 s thumbnails @10,20,...,80
+FCFS                   short WT   2062.0 s | long WT    597.5 s | overall   1769.1 s | film1 finish 1200 s | dispatches 10
+SRTF (SJF preemptive)  short WT      0.0 s | long WT    466.0 s | overall     93.2 s | film1 finish 2116 s | dispatches 19
+Round Robin q=20       short WT     32.0 s | long WT    913.5 s | overall    208.3 s | film1 finish 2116 s | dispatches 99
+MLFQ (q=2,10,50)       short WT      0.0 s | long WT    934.5 s | overall    186.9 s | film1 finish 2116 s | dispatches 57
+MLFQ + ageing boost    short WT      0.0 s | long WT    952.5 s | overall    190.5 s | film1 finish 2116 s | dispatches 69
