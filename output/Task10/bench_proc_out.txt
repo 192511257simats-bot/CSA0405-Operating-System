@@ -1,8 +1,0 @@
-experiment (1,000 creations)                  total ms  per item us
-fork()+_exit()+waitpid()  [small process]         46.8         46.8
-pthread_create()+pthread_join()                    6.8          6.8
-fork()+execl(/bin/true)+waitpid()                631.3        631.3
-posix_spawn(/bin/true)+waitpid()                 656.2        656.2
-(parent now holds 257 MiB resident)
-fork()+_exit()+waitpid()  [256 MiB parent]      2272.0       2272.0
-pthread_create()+join()   [256 MiB parent]         7.4          7.4
