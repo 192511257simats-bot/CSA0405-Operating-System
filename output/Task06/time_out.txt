@@ -1,0 +1,4 @@
+buffer      1 bytes : real 3.539s  user 0.890s  sys 2.635s
+buffer    512 bytes : real 0.018s  user 0.004s  sys 0.014s
+buffer   4096 bytes : real 0.013s  user 0.000s  sys 0.006s
+buffer  65536 bytes : real 0.009s  user 0.000s  sys 0.004s

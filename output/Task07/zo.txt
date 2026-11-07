@@ -1,0 +1,7 @@
+--- zombie child 365 (state Z = defunct) ---
+  PID  PPID STAT COMMAND
+  365   364 Z    zombie_orphan
+--- after waitpid() the entry is gone ---
+  PID  PPID STAT COMMAND
+orphan: parent before = 364
+orphan: parent after  = 1 (adopted by init/subreaper)
