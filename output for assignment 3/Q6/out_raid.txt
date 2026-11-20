@@ -1,0 +1,7 @@
+Usable capacity, 6 x 4 TB (24 TB raw):
+RAID0: 24 TB | RAID1 (3 mirrored pairs): 12 TB | RAID5: 20 TB | RAID6: 16 TB | RAID10: 12 TB
+Assume AFR=3%/yr, rebuild window=24 h -> per-disk failure prob during window p=0.000083
+RAID1 (2-disk mirror), 1 disk failed: P(loss)=p=0.000083
+RAID5 (6 disks), 1 disk failed: P(loss)=1-(1-p)^5=0.000417
+RAID10 (3 mirrors): P(loss)=p (only the failed disk's partner matters)=0.000083
+RAID6 (6 disks), 1 disk failed: P(loss)=P(>=2 of other 5 fail) ~ 6.96e-08

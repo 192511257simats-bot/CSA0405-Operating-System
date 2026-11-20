@@ -1,0 +1,26 @@
+=== startup time (1000 runs each) ===
+bank_static: 1.1173 ms per run
+bank_dyn: 1.1703 ms per run
+=== peak RSS (/usr/bin/time -v) ===
+=== replace library without recompiling ===
+Library: ENC v1 (XOR) | first byte after encryption: 0x1b
+Library: ENC v2 (SECURITY FIX) | first byte after encryption: 0x1c
+Library: ENC v1 (XOR) | first byte after encryption: 0x1b
+=== missing library ===
+./bank_dyn: error while loading shared libraries: libenc.so: cannot open shared object file: No such file or directory
+exit code: 127
+dlopen failed: ./libenc.so: cannot open shared object file: No such file or directory
+exit code: 1
+=== shared pages between two copies ===
+PID 2241:
+Private_Clean: 0 kB
+Rss: 1076 kB
+Pss_Dirty: 24 kB
+Shared_Clean: 1052 kB
+Pss: 177 kB
+PID 2242:
+Private_Clean: 0 kB
+Rss: 1076 kB
+Pss_Dirty: 24 kB
+Shared_Clean: 1052 kB
+Pss: 192 kB

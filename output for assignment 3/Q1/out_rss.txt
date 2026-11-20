@@ -1,0 +1,4 @@
+./bank_static peak RSS (children) kB: 11404
+  isolated maxrss kB: 11236
+./bank_dyn peak RSS (children) kB: 11404
+  isolated maxrss kB: 11316

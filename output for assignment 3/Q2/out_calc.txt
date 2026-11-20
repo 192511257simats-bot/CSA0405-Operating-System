@@ -1,0 +1,6 @@
+32-bit, 4KB pages: entries=2^20=1,048,576; size @4B/entry=4 MB ; @8B/entry=0.01 GB
+48-bit, 4KB pages: entries=2^36=68,719,476,736; size @4B/entry=262,144 MB ; @8B/entry=512.00 GB
+EAT without TLB = 2*mem = 200 ns
+hit 80%: EAT = 130.0 ns  (slow-down vs 100ns: 30.0%)
+hit 95%: EAT = 115.0 ns  (slow-down vs 100ns: 15.0%)
+hit 99%: EAT = 111.0 ns  (slow-down vs 100ns: 11.0%)

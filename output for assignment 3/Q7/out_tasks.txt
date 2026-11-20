@@ -1,0 +1,2 @@
+Frames (1 MB each): total=2048, OS=300, RT pinned=64, left for ML+LOG=1684; ML+LOG demand=1576
+references=400000, faults(ML+LOG)=1576, RT faults=0

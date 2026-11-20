@@ -1,0 +1,6 @@
+unlocked: loop of 16384 page accesses: worst=69954 ns, mean=1550 ns, page faults in loop=16386
+mlocked : loop of 16384 page accesses: worst=151909 ns, mean=138 ns, page faults in loop=1
+unlocked: loop of 16384 page accesses: worst=1350486 ns, mean=1940 ns, page faults in loop=16386
+mlocked : loop of 16384 page accesses: worst=26522 ns, mean=98 ns, page faults in loop=1
+unlocked: loop of 16384 page accesses: worst=1134376 ns, mean=1728 ns, page faults in loop=16386
+mlocked : loop of 16384 page accesses: worst=20054 ns, mean=94 ns, page faults in loop=1

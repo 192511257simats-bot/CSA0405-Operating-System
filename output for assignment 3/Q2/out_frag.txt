@@ -1,0 +1,4 @@
+100 random processes (1 KB..1 MB), total size 53420563 bytes
+page 1 KB : pages=  52222 internal frag=     54765 bytes (avg    547.6 B/proc,   0.10% of memory used)  page-table entries=52222
+page 4 KB : pages=  13092 internal frag=    204269 bytes (avg   2042.7 B/proc,   0.38% of memory used)  page-table entries=13092
+page 2 MB : pages=    100 internal frag= 156294637 bytes (avg 1562946.4 B/proc,  74.53% of memory used)  page-table entries=100

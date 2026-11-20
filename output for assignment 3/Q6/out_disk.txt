@@ -1,0 +1,17 @@
+NAME  MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+zram0 253:0    0    0B  0 disk 
+vda   254:0    0  256G  0 disk /
+vdb   254:16   0  9.5M  1 disk /opt/rclone
+vdc   254:32   0  752K  1 disk /mnt/skills/public
+vdd   254:48   0  5.8M  1 disk /mnt/skills/examples
+
+/bin/sh: 17: fdisk: not found
+
+Filename				Type		Size		Used		Priority
+
+               total        used        free      shared  buff/cache   available
+Mem:           3.9Gi       396Mi       3.6Gi        12Mi       140Mi       3.5Gi
+Swap:             0B          0B          0B
+
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/vda        252G  6.6G   10G  40% /

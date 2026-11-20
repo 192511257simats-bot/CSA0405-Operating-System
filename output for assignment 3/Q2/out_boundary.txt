@@ -1,0 +1,6 @@
+    0 (page 0, off    0): physical 5120
+ 1023 (page 0, off 1023): physical 6143
+ 1024 (page 1, off    0): physical 2048
+ 7167 (page 6, off 1023): physical 4095
+ 8191 (page 7, off 1023): page fault
+ 8192 (page 8, off    0): invalid (beyond last page)

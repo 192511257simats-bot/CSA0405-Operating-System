@@ -1,0 +1,4 @@
+Loaded 20 segments, 2138 KB used of 4096 KB
+After removing every 2nd segment: free holes inside used area=9, free KB in holes=936, largest hole=179 KB
+External fragmentation = 1 - largest_hole/total_free = 31.7%
+(total free incl. tail=2950 KB, largest free block incl. tail=2014 KB)

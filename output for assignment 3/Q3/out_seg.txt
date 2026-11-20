@@ -1,0 +1,8 @@
+(seg 0 [code ], off    0): physical = 1400 + 0 = 1400
+(seg 0 [code ], off  999): physical = 1400 + 999 = 2399
+(seg 0 [code ], off 1000): TRAP: offset >= limit 1000 (segmentation fault)
+(seg 1 [data ], off  399): physical = 6300 + 399 = 6699
+(seg 1 [data ], off  400): TRAP: offset >= limit 400 (segmentation fault)
+(seg 2 [heap ], off   53): physical = 4300 + 53 = 4353
+(seg 3 [stack], off 1099): physical = 3200 + 1099 = 4299
+(seg 4 [lib  ], off  500): physical = 4700 + 500 = 5200

@@ -1,0 +1,30 @@
+unlocked: loop of 16384 page accesses: worst=319771 ns, mean=1756 ns, page faults in loop=16386
+mlocked : loop of 16384 page accesses: worst=24917 ns, mean=107 ns, page faults in loop=1
+unlocked: loop of 16384 page accesses: worst=75434 ns, mean=2018 ns, page faults in loop=16386
+mlocked : loop of 16384 page accesses: worst=26731 ns, mean=101 ns, page faults in loop=1
+unlocked: loop of 16384 page accesses: worst=229644 ns, mean=2083 ns, page faults in loop=16386
+mlocked : loop of 16384 page accesses: worst=32655 ns, mean=109 ns, page faults in loop=1
+unlocked: loop of 16384 page accesses: worst=289194 ns, mean=2093 ns, page faults in loop=16386
+mlocked : loop of 16384 page accesses: worst=21901 ns, mean=100 ns, page faults in loop=1
+unlocked: loop of 16384 page accesses: worst=61102 ns, mean=1803 ns, page faults in loop=16386
+mlocked : loop of 16384 page accesses: worst=59569 ns, mean=106 ns, page faults in loop=1
+unlocked: loop of 16384 page accesses: worst=445963 ns, mean=1945 ns, page faults in loop=16386
+mlocked : loop of 16384 page accesses: worst=35335 ns, mean=99 ns, page faults in loop=1
+unlocked: loop of 16384 page accesses: worst=145257 ns, mean=1608 ns, page faults in loop=16386
+mlocked : loop of 16384 page accesses: worst=29345 ns, mean=94 ns, page faults in loop=1
+unlocked: loop of 16384 page accesses: worst=75876 ns, mean=1791 ns, page faults in loop=16386
+mlocked : loop of 16384 page accesses: worst=27089 ns, mean=95 ns, page faults in loop=1
+unlocked: loop of 16384 page accesses: worst=2366008 ns, mean=2127 ns, page faults in loop=16386
+mlocked : loop of 16384 page accesses: worst=16896 ns, mean=104 ns, page faults in loop=1
+unlocked: loop of 16384 page accesses: worst=123897 ns, mean=2026 ns, page faults in loop=16386
+mlocked : loop of 16384 page accesses: worst=41856 ns, mean=101 ns, page faults in loop=1
+unlocked: loop of 16384 page accesses: worst=208034 ns, mean=2077 ns, page faults in loop=16386
+mlocked : loop of 16384 page accesses: worst=139826 ns, mean=109 ns, page faults in loop=1
+unlocked: loop of 16384 page accesses: worst=135631 ns, mean=1836 ns, page faults in loop=16386
+mlocked : loop of 16384 page accesses: worst=166820 ns, mean=126 ns, page faults in loop=1
+unlocked: loop of 16384 page accesses: worst=141677 ns, mean=2081 ns, page faults in loop=16386
+mlocked : loop of 16384 page accesses: worst=55507 ns, mean=106 ns, page faults in loop=1
+unlocked: loop of 16384 page accesses: worst=104016 ns, mean=2058 ns, page faults in loop=16386
+mlocked : loop of 16384 page accesses: worst=26873 ns, mean=100 ns, page faults in loop=1
+unlocked: loop of 16384 page accesses: worst=112217 ns, mean=1987 ns, page faults in loop=16386
+mlocked : loop of 16384 page accesses: worst=41685 ns, mean=103 ns, page faults in loop=1

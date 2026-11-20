@@ -1,0 +1,3 @@
+Pure paging (32-bit, 4KB): single-level table = 4.0 MB per process (full); only used part needed with 2-level:  100.0 KB + 4KB top
+Pure segmentation: 5 segments x 8 B = 40 B per process
+Segmented paging: 5 seg entries (40 B) + page tables for 100 MB = 100.0 KB

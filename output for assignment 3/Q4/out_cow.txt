@@ -1,0 +1,4 @@
+parent before fork: RSS=206408 kB, PSS=205271 kB
+fork() of a 200 MB process took 1.810 ms
+child after fork, before write: RSS=206000 kB, PSS=102729 kB (pages shared)
+child after writing 100 MB    : RSS=206000 kB, PSS=153929 kB (100 MB copied)

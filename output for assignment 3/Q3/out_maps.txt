@@ -1,0 +1,22 @@
+code=0x564c91905209 data=0x564c91908010 bss=0x564c91908040 heap=0x7fe0c3444010 stack=0x7ffcf95666cc
+564c91904000-564c91905000 r--p 00000000 fe:00 622642                     /home/claude/a3/Q3/maps
+564c91905000-564c91906000 r-xp 00001000 fe:00 622642                     /home/claude/a3/Q3/maps
+564c91906000-564c91907000 r--p 00002000 fe:00 622642                     /home/claude/a3/Q3/maps
+564c91907000-564c91908000 r--p 00002000 fe:00 622642                     /home/claude/a3/Q3/maps
+564c91908000-564c91909000 rw-p 00003000 fe:00 622642                     /home/claude/a3/Q3/maps
+564ca89ca000-564ca89eb000 rw-p 00000000 00:00 0                          [heap]
+7fe0c3200000-7fe0c3228000 r--p 00000000 fe:00 115719                     /usr/lib/x86_64-linux-gnu/libc.so.6
+7fe0c3228000-7fe0c33b1000 r-xp 00028000 fe:00 115719                     /usr/lib/x86_64-linux-gnu/libc.so.6
+7fe0c33b1000-7fe0c3400000 r--p 001b1000 fe:00 115719                     /usr/lib/x86_64-linux-gnu/libc.so.6
+7fe0c3400000-7fe0c3404000 r--p 001ff000 fe:00 115719                     /usr/lib/x86_64-linux-gnu/libc.so.6
+7fe0c3404000-7fe0c3406000 rw-p 00203000 fe:00 115719                     /usr/lib/x86_64-linux-gnu/libc.so.6
+7fe0c3406000-7fe0c3413000 rw-p 00000000 00:00 0 
+7fe0c3444000-7fe0c3548000 rw-p 00000000 00:00 0 
+7fe0c3555000-7fe0c3557000 rw-p 00000000 00:00 0 
+7fe0c3557000-7fe0c355b000 r--p 00000000 00:00 0                          [vvar]
+7fe0c355b000-7fe0c355d000 r--p 00000000 00:00 0                          [vvar_vclock]
+7fe0c355d000-7fe0c355f000 r-xp 00000000 00:00 0                          [vdso]
+7fe0c355f000-7fe0c3560000 r--p 00000000 fe:00 115279                     /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7fe0c3560000-7fe0c358b000 r-xp 00001000 fe:00 115279                     /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7fe0c358b000-7fe0c3595000 r--p 0002c000 fe:00 115279                     /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7fe0c3595000-7fe0c3597000 r--p 00036000 fe:00 115279                     /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2

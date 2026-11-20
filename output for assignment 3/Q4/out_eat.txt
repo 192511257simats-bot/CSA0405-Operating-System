@@ -1,0 +1,4 @@
+p=1/1,000      EAT=   8099.90 ns  slowdown=   7999.9%  (81.0x)
+p=1/100,000    EAT=    180.00 ns  slowdown=     80.0%  (1.8x)
+p=1/1,000,000  EAT=    108.00 ns  slowdown=      8.0%  (1.1x)
+max p for 10% slow-down: 1.250e-06 = 1 fault per 799,990 accesses
