@@ -1,0 +1,14 @@
+Chunk-read latency in ms (4 MB chunk). SLO: p99 <= 500 ms.   Simulated time 120 s per run
+Design    streams      mean       p95       p99        max     >500ms  jump p50  jump p95
+   [A, 5000 streams] requests=56045  RAM=0.0%  SSD=0.0%  HDD=100.0%
+A hdd-only    5000      38.9      74.0     103.5      218.6      0.00%      47.6      86.9  
+   [B, 5000 streams] requests=56045  RAM=43.7%  SSD=28.1%  HDD=28.2%
+B tiered     5000      10.9      45.8      74.1      202.5      0.00%       1.7      47.5  
+   [A, 10000 streams] requests=111871  RAM=0.0%  SSD=0.0%  HDD=100.0%
+A hdd-only   10000      68.9     167.8     254.5      539.2      0.00%      66.8     180.8  
+   [B, 10000 streams] requests=111871  RAM=43.9%  SSD=28.0%  HDD=28.1%
+B tiered    10000      15.8      76.0     147.3      410.2      0.00%       1.7      77.5  
+   [A, 15000 streams] requests=168421  RAM=0.0%  SSD=0.0%  HDD=100.0%
+A hdd-only   15000    3935.7    9820.6   12312.9    14704.5     93.15%    3352.1    9716.1  
+   [B, 15000 streams] requests=168421  RAM=43.8%  SSD=27.9%  HDD=28.2%
+B tiered    15000      54.6     310.5     720.4     2734.2      2.26%       1.7     315.2  

@@ -1,0 +1,66 @@
+$ ls -i /etc/hostname /etc/passwd /etc/os-release
+162830 /etc/hostname
+162850 /etc/os-release
+    39 /etc/passwd
+
+$ stat /etc/passwd
+  File: /etc/passwd
+  Size: 1111      	Blocks: 8          IO Block: 4096   regular file
+Device: 254,0	Inode: 39          Links: 1
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2026-11-21 13:23:21.383390369 +0000
+Modify: 2026-11-17 20:52:25.000000000 +0000
+Change: 2026-11-17 20:52:25.000000000 +0000
+ Birth: 2026-11-17 20:58:13.000000000 +0000
+
+$ df -i /
+Filesystem       Inodes  IUsed    IFree IUse% Mounted on
+/dev/vda       16777216 165030 16612186    1% /
+
+$ df -hT /
+Filesystem     Type  Size  Used Avail Use% Mounted on
+/dev/vda       ext4  252G  6.6G   10G  40% /
+
+$ tune2fs -l /tmp/csa0405_ext4.img | egrep "Filesystem features|Inode count|Free inodes|Block count|Free blocks|Block size|Inode size|Journal|Default mount"
+Filesystem features:      has_journal ext_attr resize_inode dir_index filetype extent 64bit flex_bg sparse_super large_file huge_file dir_nlink extra_isize metadata_csum
+Default mount options:    user_xattr acl
+Inode count:              16384
+Block count:              16384
+Free blocks:              14319
+Free inodes:              16373
+Block size:               4096
+Inode size:	          256
+Journal inode:            8
+Journal backup:           inode blocks
+
+$ dumpe2fs -h /tmp/csa0405_ext4.img | head -30
+Filesystem volume name:   CSA0405
+Last mounted on:          <not available>
+Filesystem UUID:          a6e5c856-187b-4ed9-8c67-9f906d141398
+Filesystem magic number:  0xEF53
+Filesystem revision #:    1 (dynamic)
+Filesystem features:      has_journal ext_attr resize_inode dir_index filetype extent 64bit flex_bg sparse_super large_file huge_file dir_nlink extra_isize metadata_csum
+Filesystem flags:         signed_directory_hash 
+Default mount options:    user_xattr acl
+Filesystem state:         clean
+Errors behavior:          Continue
+Filesystem OS type:       Linux
+Inode count:              16384
+Block count:              16384
+Reserved block count:     819
+Overhead clusters:        2059
+Free blocks:              14319
+Free inodes:              16373
+First block:              0
+Block size:               4096
+Fragment size:            4096
+Group descriptor size:    64
+Reserved GDT blocks:      7
+Blocks per group:         32768
+Fragments per group:      32768
+Inodes per group:         16384
+Inode blocks per group:   1024
+Flex block group size:    16
+Filesystem created:       Sat Nov 21 13:27:03 2026
+Last mount time:          n/a
+Last write time:          Sat Nov 21 13:27:03 2026

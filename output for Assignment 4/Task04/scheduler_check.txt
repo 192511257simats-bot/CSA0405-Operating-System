@@ -1,0 +1,6 @@
+$ cat /sys/block/vda/queue/scheduler
+none [mq-deadline] kyber bfq 
+$ cat /sys/block/vda/queue/rotational
+1
+$ ls /sys/block
+loop0 loop1 loop2 loop3 loop4 loop5 loop6 loop7 vda vdb vdc vdd zram0 

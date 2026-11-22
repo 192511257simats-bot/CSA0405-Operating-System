@@ -1,0 +1,50 @@
+10000 random requests, cylinders 0-199, seek 1 tick/cylinder, +5 ticks per transfer
+
+Light (gap 400)
+Alg      Avg head move/request  Avg wait (ticks)   Max wait (ticks)  
+FCFS     66.18                  82.7               573.5             
+SSTF     65.60                  81.1               397.9             
+SCAN     125.08                 167.9              531.0             
+C-SCAN   175.63                 262.3              794.2             
+LOOK     65.59                  81.1               351.9             
+C-LOOK   66.19                  82.7               504.2             
+  Fairness: Alg      StdDev wait    Mean wait, edge cyl      Mean wait, middle cyl   
+            FCFS     58.0           107.0                    66.7                    
+            SSTF     55.6           104.9                    64.7                    
+            SCAN     104.5          192.4                    153.3                   
+            C-SCAN   164.7          271.3                    257.5                   
+            LOOK     55.5           104.4                    64.9                    
+            C-LOOK   58.6           106.3                    65.8                    
+
+Medium (gap 100)
+Alg      Avg head move/request  Avg wait (ticks)   Max wait (ticks)  
+FCFS     66.18                  204.5              1572.1            
+SSTF     57.74                  112.9              701.9             
+SCAN     79.83                  208.5              551.0             
+C-SCAN   87.75                  297.6              803.3             
+LOOK     57.80                  114.5              401.1             
+C-LOOK   60.32                  133.7              537.1             
+  Fairness: Alg      StdDev wait    Mean wait, edge cyl      Mean wait, middle cyl   
+            FCFS     187.1          230.8                    187.1                   
+            SSTF     77.2           142.1                    94.7                    
+            SCAN     110.9          229.2                    200.1                   
+            C-SCAN   162.4          316.3                    289.6                   
+            LOOK     74.6           139.3                    100.5                   
+            C-LOOK   94.2           156.1                    121.7                   
+
+Heavy (gap 45)
+Alg      Avg head move/request  Avg wait (ticks)   Max wait (ticks)  
+FCFS     66.18                  131687.8           259368.6          
+SSTF     37.96                  152.3              1034.5            
+SCAN     39.71                  205.9              532.9             
+C-SCAN   39.99                  280.5              801.2             
+LOOK     37.85                  155.3              465.5             
+C-LOOK   38.79                  202.3              599.0             
+  Fairness: Alg      StdDev wait    Mean wait, edge cyl      Mean wait, middle cyl   
+            FCFS     75240.7        130210.4                 131632.6                
+            SSTF     106.9          203.8                    119.4                   
+            SCAN     112.6          233.2                    183.7                   
+            C-SCAN   156.1          316.7                    272.4                   
+            LOOK     90.0           184.6                    134.1                   
+            C-LOOK   116.9          231.7                    193.4                   
+
