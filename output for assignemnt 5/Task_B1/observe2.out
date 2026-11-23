@@ -1,0 +1,26 @@
+$ iostat -x 1 2   (vda columns)
+Linux 6.18.44-fc-v726 (vm) 	11/23/26 	_x86_64_	(1 CPU)
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+           3.20    0.00    0.99    0.44    0.12   95.25
+Device            r/s     rkB/s   rrqm/s  %rrqm r_await rareq-sz     w/s     wkB/s   wrqm/s  %wrqm w_await wareq-sz     
+vda             14.23    517.18     5.18  26.71    0.31    36.36    3.94    276.99     1.79  31.30    0.43    70.31    0
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+           0.00    0.00    0.00    0.00    0.00  100.00
+Device            r/s     rkB/s   rrqm/s  %rrqm r_await rareq-sz     w/s     wkB/s   wrqm/s  %wrqm w_await wareq-sz     
+vda              0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0
+
+$ ss -tlnp
+State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess                                                                            
+LISTEN 0      2048       127.0.0.1:8000      0.0.0.0:*    users:(("gunicorn",pid=1069,fd=3),("gunicorn",pid=1068,fd=3),("gunicorn",pid=1066,
+LISTEN 0      128          0.0.0.0:2024      0.0.0.0:*                                                                                      
+LISTEN 0      511          0.0.0.0:8080      0.0.0.0:*    users:(("nginx",pid=1016,fd=5),("nginx",pid=1015,fd=5))                           
+
+$ cat /proc/loadavg
+0.31 0.12 0.04 1/88 1112
+$ head -5 /proc/meminfo
+MemTotal:        4088088 kB
+MemFree:         3701900 kB
+MemAvailable:    3756892 kB
+Buffers:            8932 kB
+Cached:           253572 kB

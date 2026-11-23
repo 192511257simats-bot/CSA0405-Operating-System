@@ -1,0 +1,21 @@
+services:
+  portal:
+    build: .
+    ports: ["8000:8000"]
+    environment:
+      DB_HOST: db
+    depends_on: [db]
+    deploy:
+      resources:
+        limits: {cpus: "0.50", memory: 256M}
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_PASSWORD: example
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+    deploy:
+      resources:
+        limits: {cpus: "0.50", memory: 512M}
+volumes:
+  dbdata:

@@ -1,0 +1,23 @@
+$ ps aux --sort=-%mem | head -6
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root      1068  5.3  0.7  39532 30376 ?        S    11:58   0:02 /usr/bin/python3 /usr/local/bin/gunicorn -w 2 -b 127.0.0.1:8000 app:app
+root      1069  5.4  0.7  39532 30376 ?        S    11:58   0:02 /usr/bin/python3 /usr/local/bin/gunicorn -w 2 -b 127.0.0.1:8000 app:app
+root        66  0.0  0.7 1956140 30044 ?       Sl   11:48   0:00 /opt/rclone/rclone-filestore multimount --config /dev/shm/rclone-boot/config.json
+root      1066  0.2  0.6 107764 26216 ?        Ssl  11:58   0:00 /usr/bin/python3 /usr/local/bin/gunicorn -w 2 -b 127.0.0.1:8000 app:app
+root         1  0.1  0.1  32756  5612 ?        SLl  11:48   0:00 /process_api --firecracker-init --addr 0.0.0.0:2024 --max-ws-buffer-size 32768 --bloc
+
+$ free -m
+               total        used        free      shared  buff/cache   available
+Mem:            3992         323        3614          12         271        3668
+Swap:              0           0           0
+
+$ df -h /
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/vda        252G  6.6G   10G  40% /
+
+$ vmstat 1 3
+procs -----------memory---------- ---swap-- -----io---- -system-- -------cpu-------
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st gu
+ 0  0      0 3701520   8932 268628    0    0   534   277  104    3  3  1 95  0  0  0
+ 0  0      0 3701588   8932 268640    0    0     0     0   27   39  0  0 100  0  0  0
+ 0  0      0 3701588   8932 268640    0    0     0     0   12   14  0  0 100  0  0  0

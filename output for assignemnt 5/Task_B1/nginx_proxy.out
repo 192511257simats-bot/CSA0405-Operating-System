@@ -1,0 +1,25 @@
+$ ss -tlnp
+State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess                                                                                  
+LISTEN 0      2048       127.0.0.1:8000      0.0.0.0:*    users:(("gunicorn",pid=1011,fd=3),("gunicorn",pid=1010,fd=3),("gunicorn",pid=1008,fd=3))
+LISTEN 0      128          0.0.0.0:2024      0.0.0.0:*                                                                                            
+LISTEN 0      511          0.0.0.0:8080      0.0.0.0:*    users:(("nginx",pid=1016,fd=5),("nginx",pid=1015,fd=5))                                 
+
+$ curl -i -H "Host: portal.simats.local" http://localhost:8080/result/CSA0405001
+HTTP/1.1 200 OK
+Server: nginx/1.24.0 (Ubuntu)
+Date: Mon, 23 Nov 2026 11:58:15 GMT
+Content-Type: application/json
+Content-Length: 43
+Connection: keep-alive
+
+{"regno":"CSA0405001","result":"PASS (A)"}
+
+$ curl -i http://localhost:8080/health
+HTTP/1.1 200 OK
+Server: nginx/1.24.0 (Ubuntu)
+Date: Mon, 23 Nov 2026 11:58:15 GMT
+Content-Type: application/json
+Content-Length: 39
+Connection: keep-alive
+
+{"status":"ok","ts":1795435095.314491}

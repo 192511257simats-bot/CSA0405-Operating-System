@@ -1,0 +1,18 @@
+$ ps -e | wc -l   (host)
+62
+$ unshare --pid --fork --mount-proc --uts --net sh -c "hostname container1; hostname; echo PID-inside=\$\$; ps -e; ip link"
+hostname inside: container1
+PID inside: 1
+    PID TTY          TIME CMD
+      1 ?        00:00:00 sh
+      4 ?        00:00:00 ps
+--- network interfaces inside:
+lo               DOWN           00:00:00:00:00:00 <LOOPBACK> 
+hostname on host (unchanged): vm
+
+--- cgroup memory limit (what docker run --memory=64m does)
+67108864
+$ python3 allocating 200 MB inside the 64 MB cgroup
+Killed
+exit code: 137
+memory.failcnt (times limit hit): 36

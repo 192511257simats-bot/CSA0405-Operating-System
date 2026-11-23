@@ -1,0 +1,17 @@
+$ ab -n 5000 -c 50 http://127.0.0.1:8000/ping   (gunicorn direct, bare metal)
+Concurrency Level:      50
+Time taken for tests:   2.380 seconds
+Complete requests:      5000
+Failed requests:        0
+Requests per second:    2100.63 [#/sec] (mean)
+Time per request:       23.802 [ms] (mean)
+Time per request:       0.476 [ms] (mean, across all concurrent requests)
+
+$ ab -n 5000 -c 50 http://127.0.0.1:8080/ping   (via Nginx reverse proxy)
+Concurrency Level:      50
+Time taken for tests:   2.543 seconds
+Complete requests:      5000
+Failed requests:        0
+Requests per second:    1966.15 [#/sec] (mean)
+Time per request:       25.430 [ms] (mean)
+Time per request:       0.509 [ms] (mean, across all concurrent requests)

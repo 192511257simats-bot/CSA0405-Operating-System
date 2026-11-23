@@ -1,0 +1,2 @@
+0 * * * * /opt/scripts/log_summary.sh >> /var/log/log_summary.log 2>&1
+*/30 * * * * /opt/scripts/disk_alert.sh 80 >> /var/log/disk_alert.log 2>&1
